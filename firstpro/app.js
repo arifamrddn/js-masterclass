@@ -67,33 +67,89 @@
 // implicit
 
 // math operation on a string?
-const name = 'john'
-const lastName = 'jordan'
-const value = name - lastName //return nan
+// const name = 'john'
+// const lastName = 'jordan'
+// const value = name - lastName //return nan
 
-let number3 = '10'
-let number4 = '20'
-const value = number3 - number4 //return -10 //js do convert
+// let number3 = '10'
+// let number4 = '20'
+// const value = number3 - number4 //return -10 //js do convert
 
-/////////////////////////////////////////////////////////////////////////
-// Data types 7 total
+// /////////////////////////////////////////////////////////////////////////
+// // Data types 7 total
 
-// typeof - operator  (typeof variable) (typeof value) //nak tau dia type apa
+// // typeof - operator  (typeof variable) (typeof value) //nak tau dia type apa
 
-//string
-const text = 'some text'
+// //string
+// const text = 'some text'
 
-//number
-const number = 24
+// //number
+// const number = 24
 
-//Boolean
-let valu1 = true
-let valu2 = false
+// //Boolean
+// let valu1 = true
+// let valu2 = false
 
-//null
-let result = null
+// //null
+// let result = null
 
-//undefined
-let result2
+// //undefined
+// let result2
 
 //symbol (ES6)
+
+//return
+// const wallHeight = 80
+
+// function calculate(value) {
+//   const newValue = value * 2.54
+
+//   return newValue
+// }
+
+// const width = calculate(100)
+
+// const height = calculate(wallHeight)
+
+// const dimensions = [width, height]
+// console.log(dimensions)
+
+// // Function expressions
+// const num1 = 10
+// const num2 = 20
+// const add = function (num1, num2) {
+//   return num1 + num2
+// }
+
+// const thirdValue = add(5, 6)
+// console.log(thirdValue)
+
+// const multiply = (num1, num2) => num1 * num2
+// console.log(multiply(2, 5))
+
+////////////////////////////////////////////////////////
+// object
+// const person = {
+//   name: 'john',
+//   lastName: 'peters',
+//   age: 40,
+//   education: false,
+//   married: true,
+//   siblings: ['ana', 'susan', 'peter'],
+//   greeting: function () {
+//     console.log('Hello my name is John')
+//   },
+// }
+
+// // dot Notation
+// person.name = 'bob'
+// console.log(person.name)
+// console.log(person.siblings[2])
+// person.greeting()
+
+////////////////////////////////////////////////////////conditional statements
+// >,<,>=,<=,==,===,!=,!===
+
+// if (2 > 1) {
+//   console.log('hellow')
+// }
