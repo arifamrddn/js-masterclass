@@ -98,6 +98,7 @@
 
 //symbol (ES6)
 
+<<<<<<< Updated upstream
 //return
 // const wallHeight = 80
 
@@ -152,4 +153,112 @@
 
 // if (2 > 1) {
 //   console.log('hellow')
+=======
+//array
+// const friend1 = 'anna'
+// const friend2 = 'anna'
+// const friend3 = 'anna'
+// const friend4 = 'anna'
+
+// const friends = ['anna', 'peter', 'bob', 45, undefined, null]
+
+// console.log(friends)
+
+//////////////////////////////////////////////////////////////////////////////
+//functions
+
+// function hello() {
+//   console.log('hellow there bob')
+//   console.log('hellow there ali')
+//   console.log('hellow there meow')
+// }
+
+// hello()
+// hello()
+// hello()
+
+// function hellow(name) {
+//   console.log('hellow there ' + name)
+// }
+
+// hellow('bob')
+// hellow('anna')
+// hellow('suzy')
+
+///////////////////////////////////////////////////////////////////
+// conditional
+
+const num1 = 6
+const num2 = 6
+// const result = num1 >= num2
+// if (num1 > num2) {
+//   console.log('first number is bigger than second')
+// } else if (result) {
+//   //when condition return true
+//   console.log('number equal')
+// } else {
+//   console.log('second number is bigger than first')
+// }
+
+// const value = num1 == num2 //check value only
+// const value2 = num1 === num2 //check value and type
+
+// const value = num1 != num2 //check value only
+// const value2 = num1 !== num2 //check value and type
+
+// const name = 'peter'
+// const age = 24
+
+// if (name === 'bob' && age === 24) {
+//   console.log('hellow there user')
+// } else {
+//   console.log('wrong values')
+// }
+
+//switch
+// dice value
+
+// const dice = 1
+
+// switch (dice) {
+//   case 1:
+//     console.log('you got one')
+//     break
+//   case 2:
+//     console.log('u got two')
+//     break
+//   case 3:
+//     console.log('u got three')
+//     break
+
+//   default:
+//     console.log('u did not roll the dice')
+//     break
+// }
+
+///////////////////////////////////////////////////////////
+// loops
+
+// let amount = 10
+
+// while (amount > 0) {
+//   console.log('i have ' + amount + "dollars and i'm goint to the mall")
+//   amount--
+// }
+
+// let money = 0
+
+// do {
+//   console.log('you have ' + money + 'dollars')
+//   money++
+// } while (money < 10)
+
+// let i
+// for (i = 0; i < 10; i++) {
+//   console.log('and the number is' + i)
+// }
+
+// for (let number = 11; number >= 0; number--) {
+//   console.log(number)
+>>>>>>> Stashed changes
 // }
