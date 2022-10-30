@@ -98,7 +98,6 @@
 
 //symbol (ES6)
 
-<<<<<<< Updated upstream
 //return
 // const wallHeight = 80
 
@@ -153,7 +152,6 @@
 
 // if (2 > 1) {
 //   console.log('hellow')
-=======
 //array
 // const friend1 = 'anna'
 // const friend2 = 'anna'
@@ -260,5 +258,4 @@ const num2 = 6
 
 // for (let number = 11; number >= 0; number--) {
 //   console.log(number)
->>>>>>> Stashed changes
 // }
