@@ -318,12 +318,271 @@
 //keydown - when key is down
 //keyup - when key is released
 
-const nameInput = document.getElementById('name')
+// const nameInput = document.getElementById('name')
 
-nameInput.addEventListener('keypress', function () {
-  const text = `this input is required \n`
-  document.body.append(text)
-})
-nameInput.addEventListener('keydown', function () {
-  console.log(nameInput.value)
+// nameInput.addEventListener('keypress', function () {
+//   const text = `this input is required \n`
+//   document.body.append(text)
+// })
+// nameInput.addEventListener('keydown', function () {
+//   console.log(nameInput.value)
+// })
+
+/////////////////////////////////////////////////
+//event object argument e,evt
+// info about triggered event
+//event.type
+//event.currentTarget
+//this keyword
+// preventDefault() - prevents default behaviour
+
+// const heading = document.querySelector('h1')
+// const btn = document.querySelector('.btn')
+// const link = document.querySelector('#link')
+
+// heading.addEventListener('click', function (event) {
+//   // heading.classList.add('blue')
+//   console.log(event.currentTarget)
+//   console.log(this) //dua dua boleh pakai
+// })
+// btn.addEventListener('click', function (event) {
+//   // heading.classList.add('blue')
+//   console.log(event.currentTarget)
+//   event.currentTarget.classList.add('blue')
+// })
+
+// function someFunc(e) {
+//   e.preventDefault()
+// }
+
+// link.addEventListener('click', someFunc)
+
+//currentTarget - always refers to the element to which the event handler has been attached to
+//target - identifies the element on which the event occured
+
+// const btns = document.querySelectorAll('.btn')
+
+// btns.forEach(function (btn) {
+//   btn.addEventListener('click', function (e) {
+//     // e.currentTarget.style.color = 'green'
+//     e.target.classList.add('blue') //kalau ada nested. dia akan amik yang element je
+//   })
+// })
+
+//bubble -capturing
+//allows select dynamic elements
+//event propagation - order the events are fired
+// event bubbling - clicked element first then bubbles up --  default
+// event capturing - fires at the root and fires until reaches target
+
+// const container = document.querySelector('.container')
+// const list = document.querySelector('.list-items')
+
+// function showBubbling(e) {
+//   // e.currentTarget
+//   console.log(e.currentTarget)
+//   // console.log(e.target) //dia more specific, kita guna ni kalau id kat class jew senangz
+//   // if (e.target.classList.contains('link')) {
+//   //   alert('u click on a link')
+//   // }
+// }
+
+// function stopPropagation(e) {
+//   e.stopPropagation() //stop doing anything
+// }
+// list.addEventListener('click', showBubbling)
+// list.addEventListener('click', showBubbling, { capture: true })
+// list.addEventListener('click', stopPropagation)
+// container.addEventListener('click', showBubbling)
+
+// const container = document.querySelector('.container')
+// const btn = document.querySelector('.btn')
+// // const heading = document.querySelector('.heading')
+
+// function sayHello() {
+//   console.log('hello there')
+// }
+
+// btn.addEventListener('click', function () {
+//   const element = document.createElement('h1')
+//   element.classList.add('heading')
+//   element.textContent = `i'm inside the container`
+//   container.appendChild(element)
+// })
+// container.addEventListener('click', function (e) {
+//   // console.log(e.target.classList)
+//   if (e.target.classList.contains('heading')) {
+//     console.log('hello')
+//   }
+// })
+
+// heading.addEventListener('click', sayHello)
+
+//////////////////////////////////////////////////////////////////////////
+//form submission
+//submit event listener
+//prevent default
+// how to get a value
+
+// const form = document.getElementById('form')
+// const name = document.getElementById('name')
+// const password = document.getElementById('password')
+
+// form.addEventListener('submit', function (e) {
+//   e.preventDefault()
+//   console.log('form submitted')
+//   console.log(name.value)
+//   console.log(password.value)
+// })
+
+///////////////////////////////////////////////////////////////////////////
+//web storage API -  Provided by browser
+// session storage, local storage
+//setItem, getItem, removeItem, clear
+
+//localStorage.setItem('name','john') //when every open close
+//sessionStorage.setItem('name','john) //when session in tab
+
+// localStorage.setItem('name', 'john') //sama key akan overwrite
+// localStorage.getItem('name')
+// console.log(localStorage.getItem('name'))
+
+// localStorage.removeItem('name')
+// json.stringify, json.parse
+
+// const friends = ['john', 'peter', 'bob']
+
+// const friendJson = JSON.stringify(friends)
+// localStorage.setItem('data', friendJson)
+
+// const data = localStorage.getItem('data')
+// const dataParse = JSON.parse(data)
+// console.log(data)
+// console.log(dataParse)
+
+// let fruits
+// if (localStorage.getItem('fruits')) {
+//   fruits = JSON.parse(localStorage.getItem('fruits'))
+// } else {
+//   fruits = []
+// }
+
+// console.log(fruits)
+// fruits.push('orange')
+// localStorage.setItem('fruits', JSON.stringify(fruits))
+
+////////////////////////////////////////////////////////////////////
+/*
+setTimeout - runs function once after specific time
+
+-pass function reference
+-duration in ms (1000ms = 1 second)
+-default 0, will cover more extensively in async/await section
+returns unique identifier
+-clearTimeout to cancel
+-on window object
+
+*/
+
+// function sayHellow() {
+//   console.log('hello john')
+// }
+
+// setTimeout(sayHellow, 1000)
+
+// // alternative approach,es6 functions
+
+// setTimeout(function () {
+//   console.log('hellow meow')
+// }, 2000)
+
+//pass arguments
+
+// function showScore(name, score) {
+//   console.log(`hello ${name} ${score}`)
+// }
+
+// const first = setTimeout(showScore, 1000, 'arum', 24)
+// const second = setTimeout(showScore, 1000, 'peter', 88)
+// console.log(first) //unique identifiers
+// console.log(second)
+
+// clearTimeout(first)
+
+///////////////////////////////////////////////////////////////////////
+// setInterval - runs function repeatedly, at specific intervals
+/*
+-pass function reference
+-duration in ms (1000ms = 1 second)
+-default 0, will cover more extensively in async/await section
+returns unique identifier
+-clearInterval to cancel
+-on window object
+
+*/
+
+// function showScore(name, score) {
+//   console.log(`hello ${name}, your score is ${score}`)
+// }
+
+// const first = setInterval(showScore, 1000, 'bobo', 45)
+// clearInterval(first)
+/////////////////////////////////////////////////////////////////////////
+//DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading
+
+// window.addEventListener('DOMContentLoaded', function () {
+//   const heading = document.querySelector('h1')
+//   heading.style.color = 'red'
+//   console.log('hello')
+// })
+
+/////////////////////////////////////////////////////////////
+/*
+the load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images, this in contrast to DOMContentLoaded,
+*/
+
+// window.addEventListener('load', function () {
+//   console.log('i will run second')
+//   const img = document.querySelector('img')
+//   console.log(img)
+//   console.log(img.width)
+// }) //when done loaded sume bende gamba sume
+
+// window.addEventListener('DOMContentLoaded', function () {
+//   console.log('i will run first')
+//   const img = document.querySelector('img')
+//   console.log(img)
+//   console.log(img.width)
+// })
+
+//////////////////////////////////////////////////////////////
+/* 
+scroll event - on element or document
+
+*/
+
+// window.addEventListener('scroll', function () {
+//   console.log(window.scrollY + 'px')
+//   console.log(window.scrollX + 'px')
+// }) //if only we can scroll
+
+//////////////////////////////////////////////////////////////
+/*
+innerWidth - the read-only window property the interior width of the window in pixels
+
+*/
+
+// console.log('height : ' + window.innerHeight)
+// console.log('width : ' + window.innerWidth)
+
+// const btn = document.querySelector('.btn')
+// const box = document.querySelector('.box')
+
+// btn.addEventListener('click', function () {
+//   const values = box.getBoundingClientRect()
+//   console.log(values)
+// })
+
+window.addEventListener('resize', function () {
+  console.log(window.innerWidth)
 })
